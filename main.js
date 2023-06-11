@@ -10,11 +10,10 @@ function cambiarColor(e) {
         btn.classList.remove("active")
     })
 
-    e.target.classList.add("active")
-
-    localStorage.setItem("color", e.target.id)
-    let colorLS = localStorage.getItem("color")
-    console.log(colorLS)
-    let root = document.documentElement;
-    root.style.setProperty("--main-color", colorLS);
+    let boton = e.target
+    boton.classList.add("active")
+    
+    let root = document.documentElement
+    let id = boton.id
+    root.style.setProperty("--main-color", id);
 }
